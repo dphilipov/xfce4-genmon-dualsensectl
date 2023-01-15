@@ -3,6 +3,8 @@ readonly ICON_ACTIVE='/path/to/icon.svg'
 readonly ICON_INACTIVE='/path/to/icon.svg'
 readonly TOOLTIP='Controller 2'
 
+# You do not need the MAC address if you are using only one controller. Replace the below line with:
+# readonly BATTERY_LEVEL=$(dualsensectl battery | awk '{print $1}')
 readonly BATTERY_LEVEL=$(dualsensectl -d $MAC_ADDRESS battery | awk '{print $1}')
 
 if [ "$BATTERY_LEVEL" -ge 0 ]; then
