@@ -1,10 +1,8 @@
 # A DualSense battery level tray icon & power off button
 
-Active State (Controller connected):
-![Active Screenshot](screenshots/active.png)
+Active and Inactive states:
+![image](https://user-images.githubusercontent.com/76788928/212563273-12d9fe98-c161-4d59-be98-589734287751.png)
 
-Inactive State (Controller disconnected):
-![Inactive Screenshot](screenshots/inactive.png)
 
 The script takes the output from [dualsensectl](https://github.com/nowrep/dualsensectl) and displays it as a tray icon via the [xfce4-genmon-plugin](https://docs.xfce.org/panel-plugins/xfce4-genmon-plugin/start). It also powers off the controller when you click on the battery percentage number.
 
