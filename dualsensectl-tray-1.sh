@@ -9,8 +9,7 @@ readonly BATTERY_LEVEL=$(dualsensectl -d $MAC_ADDRESS battery | awk '{print $1}'
 
 if [ "$BATTERY_LEVEL" -ge 0 ]; then
     echo "<img>$ICON_ACTIVE</img>"
-    echo "<txt><b>$BATTERY_LEVEL%</b></txt>"
-    echo "<txtclick>dualsensectl -d $MAC_ADDRESS power-off</txtclick>"
+    echo "<txt><b>$BATTERY_LEVEL%</b><click>dualsensectl -d $MAC_ADDRESS power-off</click></txt>"
     echo "<tool>$TOOLTIP</tool>" 
 else
     echo "<img>$ICON_INACTIVE</img>"
