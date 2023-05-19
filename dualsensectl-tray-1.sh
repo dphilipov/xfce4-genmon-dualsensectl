@@ -8,8 +8,8 @@ readonly TOOLTIP='Controller 1'
 readonly BATTERY_LEVEL=$(dualsensectl -d $MAC_ADDRESS battery | awk '{print $1}')
 
 if [ "$BATTERY_LEVEL" -ge 0 ]; then
-    echo "<img>$ICON_ACTIVE</img>"
-    echo "<txt><b>$BATTERY_LEVEL%</b><click>dualsensectl -d $MAC_ADDRESS power-off</click></txt>"
+    echo "<img>$ICON_ACTIVE</img><click>dualsensectl -d $MAC_ADDRESS power-off</click>"
+    echo "<txt><b>$BATTERY_LEVEL%</b></txt>"
     echo "<tool>$TOOLTIP</tool>" 
 else
     echo "<img>$ICON_INACTIVE</img>"
